@@ -1,0 +1,28 @@
+$primary-bg-color: #ffffff;
+$secondary-bg-color: #f5f4fa;
+$footer-bg-color: #2f303a;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$accent-color: #2196f3;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.transition {
+  transition-property: background-color, border, box-shadow, color, fill, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
