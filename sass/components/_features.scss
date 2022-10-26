@@ -7,7 +7,6 @@
     gap: 30px;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 30px) / 2);
   }
 
   @include desktop {
@@ -23,11 +22,11 @@
 
 .features__item {
   @include tablet {
-    width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   @include desktop {
-    width: 270px;
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 

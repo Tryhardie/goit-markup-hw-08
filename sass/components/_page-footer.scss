@@ -1,18 +1,42 @@
 .footer {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .page-footer {
-  padding-top: 60px;
+  padding: 60px 0;
   background-color: $footer-bg-color;
 }
 
 .address {
-  margin: 20px 0 0 0;
-  padding: 0 0 60px 0;
+  margin: 20px 0 60px 0;
+  padding: 0;
   list-style: none;
+
+  @include desktop {
+    margin: 20px 0 0 0;
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .address__link {
@@ -54,8 +78,14 @@
 }
 
 .page-footer__social {
-  margin: 20px 0 0 0;
+  margin: 20px 0 60px 0;
   padding: 0;
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
 }
 
 .page-footer__social__link {
@@ -65,13 +95,21 @@
 
 .sub__items {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 20px 0 0 0;
+  max-width: 450px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    min-width: 570px;
+  }
 }
 
 .sub__input {
-  margin: 0 12px 0 0;
+  margin: 0 0 20px 0;
   padding: 0 0 0 16px;
-  width: 358px;
+  width: 450px;
   height: 50px;
   background: none;
   outline: none;
@@ -81,6 +119,11 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @include desktop {
+    margin: 0 12px 0 0;
+    width: 358px;
+  }
 
   &:focus {
     border: 1px solid $accent-color;
@@ -97,6 +140,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 28px;
+  width: 200px;
   border: none;
   color: #ffffff;
   font-style: normal;
