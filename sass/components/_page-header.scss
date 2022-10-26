@@ -5,20 +5,33 @@
 .header-wrapper {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    justify-content: space-between;
+  }
 }
 
 .nav {
-  display: flex;
-  margin: 0 0 0 93px;
-  padding: 0;
-  list-style-type: none;
+  display: none;
 
-  &__item + &__item {
-    margin-left: 50px;
+  @include tablet {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item + &__item {
+      margin-left: 50px;
+    }
+  }
+
+  @include desktop {
+    margin: 0 0 0 93px;
   }
 }
 
 .nav__link {
+  display: block;
   padding: 32px 0;
   text-decoration: none;
   font-weight: 500;
@@ -34,23 +47,39 @@
 }
 
 .contacts {
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style-type: none;
+  display: none;
 
-  &__item + &__item {
-    margin-left: 50px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item:first-child {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+    margin: 0 0 0 auto;
+
+    &__item + &__item {
+      margin-left: 50px;
+    }
   }
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
-  padding: 32px 0;
   text-decoration: none;
   font-weight: 500;
-  line-height: 1.1;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
 
@@ -59,11 +88,21 @@
     color: $accent-color;
     @extend .transition;
   }
+
+  @include desktop {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.1;
+  }
 }
 
 .contacts__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+
+  @include desktop {
+    margin-right: 10px;
+  }
 }
 
 .current {

@@ -1,18 +1,22 @@
 .container {
-  width: 450px;
+  width: 480px;
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include tablet {
-    width: 738px;
+    width: 768px;
   }
 
   @include desktop {
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1200px;
   }
 }
 
 .section {
-  padding: 94px 0px;
+  padding: 60px 0px;
+
+  @include desktop {
+    padding: 94px 0px;
+  }
 }

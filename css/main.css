@@ -28,36 +28,46 @@ body {
 }
 
 .container {
-  width: 450px;
+  width: 480px;
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1200px;
   }
 }
 
 .section {
-  padding: 94px 0px;
+  padding: 60px 0px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0px;
+  }
 }
 
 .logo {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   color: #000000;
 }
 .logo__accent {
   color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .page-footer__logo {
@@ -76,20 +86,38 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 1199px) {
+  .header-wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 93px;
-  padding: 0;
-  list-style-type: none;
+  display: none;
 }
-.nav__item + .nav__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .nav__item + .nav__item {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin: 0 0 0 93px;
+  }
 }
 
 .nav__link {
+  display: block;
   padding: 32px 0;
   text-decoration: none;
   font-weight: 500;
@@ -102,15 +130,38 @@ body {
 }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style-type: none;
+  display: none;
 }
-.contacts__item + .contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contacts__item:first-child {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 0 0 auto;
+  }
+  .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .contacts__link {
@@ -120,20 +171,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 0;
   text-decoration: none;
   font-weight: 500;
-  line-height: 1.1;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #757575;
 }
 .contacts__link:hover, .contacts__link:focus {
   color: #2196f3;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}
 
 .contacts__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    margin-right: 10px;
+  }
 }
 
 .current {
@@ -152,8 +215,8 @@ body {
 }
 
 .hero {
-  padding: 200px 0;
-  max-width: 1600px;
+  padding: 118px 0;
+  max-width: 767px;
   margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
@@ -162,20 +225,39 @@ body {
   background-color: #2f303a;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1199px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+    max-width: 1600px;
+  }
+}
 
 .hero__heading {
-  margin: 0 0 30px 0;
-  padding: 0 238px;
+  width: 360px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (min-width: 1200px) {
+  .hero__heading {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
+}
 
 .hero__btn {
-  padding: 10px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   border: none;
   font-weight: 700;
@@ -191,18 +273,50 @@ body {
 .hero__btn:hover, .hero__btn:focus {
   background-color: #188ce8;
 }
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    padding: 10px 32px;
+  }
+}
 
 .features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+@media screen and (min-width: 768px) {
+  .features__list {
+    gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 
-.features__item + .features__item {
-  margin-left: 30px;
+@media screen and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 
 .features__wrapper {
@@ -216,7 +330,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0 30px 0;
-  width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -226,7 +339,13 @@ body {
   margin: 0 0 10px 0;
   font-size: 14px;
   line-height: 1.1;
+  text-align: center;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .features__heading {
+    text-align: left;
+  }
 }
 
 .features__text {
