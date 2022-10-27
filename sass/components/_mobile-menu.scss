@@ -36,14 +36,14 @@
     @extend .transition;
   }
 
-  @include tablet {
-    display: none;
-  }
-
   &--position {
     position: absolute;
     top: 10px;
     right: 15px;
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 
@@ -51,100 +51,75 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .mobile-menu__nav-item,
 .mobile-menu__contacts-item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  list-style: none;
 
-    @include mobile {
-      margin-bottom: 32px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
 .mobile-menu__nav-link {
-  font-size: 30px;
+  text-decoration: none;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: $primary-text-color;
 
-  @include mobile {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 1.2;
-  }
-
   &--current {
-    display: block;
     margin-left: 4px;
     color: $accent-color;
   }
 }
 
 .mobile-menu__contacts {
-  margin-bottom: 40px;
-
-  @include mobile {
-    margin-bottom: 64px;
-  }
+  list-style: none;
+  margin: 0 0 64px 0;
+  padding: 0;
 }
 
 .mobile-menu__contacts-link {
-  font-size: 24px;
+  text-decoration: none;
+  font-size: 34px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: $accent-color;
 
-  @include mobile {
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.2;
-  }
-
-  &--accent {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+  &--mail {
+    font-size: 24px;
     color: $secondary-text-color;
-
-    @include mobile {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.2;
-    }
   }
 }
 
-.mobile-menu__sns {
+.mobile-menu__soc {
   display: flex;
-  flex-wrap: wrap;
+  margin: 0;
   gap: 10px;
-
-  @include mobile {
-    flex-wrap: nowrap;
-  }
+  list-style: none;
+  padding-left: 0;
 }
 
-.mobile-menu__sns-link {
-  font-size: 14px;
+.mobile-menu__soc-link {
+  text-decoration: none;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: $accent-color;
-
-  @include mobile {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.2;
-  }
 }
 
-.mobile-menu__sns-item:not(:last-child) {
+.mobile-menu__soc-item:not(:last-child) {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
