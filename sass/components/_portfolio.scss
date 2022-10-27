@@ -7,6 +7,12 @@
   list-style-type: none;
   max-width: 326px;
 
+  @media screen and (max-width: 479px) {
+    &__item:nth-child(3) {
+      margin-right: 8px;
+    }
+  }
+
   @media screen and (max-width: 767px) {
     &__item:nth-child(-n + 2),
     &__item:nth-last-child(2) {
