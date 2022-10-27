@@ -1,4 +1,5 @@
 .logo {
+  padding: 16px 0;
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-weight: 700;
@@ -8,6 +9,10 @@
 
   &__accent {
     color: $accent-color;
+  }
+
+  @include tablet {
+    padding: 0;
   }
 
   @include desktop {
