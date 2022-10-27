@@ -117,24 +117,58 @@
           <ul class="about__list">
             <li class="about__item">
               <div class="about__thumb">
-                <img class="about__img" src="./images/img.jpg" alt="Процесс розробки" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/about/img@1x.jpg 1x,
+                      ./images/desktop/about/img@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="about__img"
+                    src="./images/desktop/about/img@1x.jpg"
+                    alt="Процесс розробки"
+                    width="370"
+                  />
+                </picture>
                 <h3 class="about__description">Десктопні додатки</h3>
               </div>
             </li>
             <li class="about__item">
               <div class="about__thumb">
-                <img
-                  class="about__img"
-                  src="./images/img-1.jpg"
-                  alt="Оформлення додатку"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/about/img@1x-1.jpg 1x,
+                      ./images/desktop/about/img@2x-1.jpg 2x
+                    "
+                  />
+                  <img
+                    class="about__img"
+                    src="./images/desktop/about/img@1x-1.jpg"
+                    alt="Оформлення додатку"
+                    width="370"
+                  />
+                </picture>
                 <h3 class="about__description">Мобільні додатки</h3>
               </div>
             </li>
             <li class="about__item">
               <div class="about__thumb">
-                <img class="about__img" src="./images/img-2.jpg" alt="Дизайн" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/about/img@1x-2.jpg 1x,
+                      ./images/desktop/about/img@2x-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="about__img"
+                    src="./images/desktop/about/img@1x-2.jpg"
+                    alt="Дизайн"
+                    width="370"
+                  />
+                </picture>
                 <h3 class="about__description">Дизайнерські рішення</h3>
               </div>
             </li>
@@ -146,12 +180,25 @@
           <h2 class="team__heading">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/img.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/desktop/team/img@1x.jpg 1x, ./images/desktop/team/img@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tablet/team/img@1x.jpg 1x, ./images/tablet/team/img@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mobile/team/img@1x.jpg 1x, ./images/mobile/team/img@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/desktop/team/img@1x.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__member">Ігор Дем'яненко</h3>
                 <p class="team__spec">Product Designer</p>
@@ -184,7 +231,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./images/team/img-1.jpg" alt="Ольга Рєпіна" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/img@1x-1.jpg 1x,
+                    ./images/desktop/team/img@2x-1.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/img@1x-1.jpg 1x,
+                    ./images/tablet/team/img@2x-1.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/img@1x-1.jpg 1x,
+                    ./images/mobile/team/img@2x-1.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/desktop/team/img@1x-1.jpg"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__member">Ольга Рєпіна</h3>
                 <p class="team__spec">Frontend Developer</p>
@@ -217,12 +291,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/img-2.jpg"
-                alt="Микола Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/img@1x-2.jpg 1x,
+                    ./images/desktop/team/img@2x-2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/img@1x-2.jpg 1x,
+                    ./images/tablet/team/img@2x-2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/img@1x-2.jpg 1x,
+                    ./images/mobile/team/img@2x-2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/desktop/team/img@1x-2.jpg"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__member">Микола Тарасов</h3>
                 <p class="team__spec">Marketing</p>
@@ -255,12 +351,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/img-3.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/img@1x-3.jpg 1x,
+                    ./images/desktop/team/img@2x-3.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/img@1x-3.jpg 1x,
+                    ./images/tablet/team/img@2x-3.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/img@1x-3.jpg 1x,
+                    ./images/mobile/team/img@2x-3.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/desktop/team/img@1x-3.jpg"
+                  alt="Михайло Єрмаков"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__member">Михайло Єрмаков</h3>
                 <p class="team__spec">UI Designer</p>
