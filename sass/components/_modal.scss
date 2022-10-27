@@ -15,13 +15,18 @@
   transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -34,8 +39,12 @@
   margin: 0 0 12px 0;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
+
+  @include desktop {
+    line-height: 1.2;
+  }
 }
 
 .close-btn {
@@ -122,10 +131,15 @@
   resize: none;
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.1;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+
+    @include desktop {
+      font-size: 12px;
+      line-height: 1.2;
+    }
   }
 
   &:focus {
@@ -157,10 +171,17 @@
 
 .accept__lable {
   display: flex;
-  margin: 0 0 0 12px;
+  margin-bottom: 30px;
   align-items: center;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.2;
   color: $secondary-text-color;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-left: 12px;
+  }
 }
 
 .terms {
@@ -181,7 +202,7 @@
 
 .send-btn {
   padding: 10px 52px;
-  margin: 30px 124px 40px 124px;
+  margin-left: 85px;
   border-radius: 4px;
   border: none;
   font-weight: 700;
@@ -197,6 +218,10 @@
   &:focus {
     background-color: #188ce8;
     @extend .transition;
+  }
+
+  @include desktop {
+    margin-left: 124px;
   }
 }
 
